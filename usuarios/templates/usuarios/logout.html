@@ -1,0 +1,22 @@
+{% extends 'investimentos/base.html' %}
+{% load crispy_forms_tags %}
+{% block conteudo %}
+
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+    </head>
+    <body>
+        <div class="container" style="padding: 30px;">
+            <h1>Você saiu do sistema</h1>
+            <form method="post">
+                {% csrf_token %}
+                <a href="{% url 'login' %}">Fazer login novamente</a>
+            </form>
+    </div>
+</body>
+</html>
+{% endblock %}
